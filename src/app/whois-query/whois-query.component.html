@@ -1,0 +1,19 @@
+<div class='hexonet'>
+ <div class='box'>
+   <div class='title'>Code Test</div>
+   <div class='form'>
+     <div class='form-group'>
+       <input class='form-control' type='text' required name='domain' [(ngModel)]='inputDomain'/>
+     </div>
+     <div class='form-group'>
+       <button class='btn btn-lg btn-primary' type='submit' (click)='sendQuery()' >SUBMIT</button>
+     </div>
+   </div>
+   <div *ngIf="serverRespond.length > 0">
+      <p>Respond from server</p>
+      <textarea class='output' >
+        {{ serverRespond.join('')}}
+      </textarea>
+   </div>
+ </div>
+</div>
